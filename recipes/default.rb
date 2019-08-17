@@ -8,4 +8,6 @@ apt_update 'update_sources' do
   action :update
 end
 
-package 'python3'
+package 'python'
+
+package 'python-pip'

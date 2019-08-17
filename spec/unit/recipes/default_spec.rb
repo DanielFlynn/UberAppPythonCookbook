@@ -18,8 +18,15 @@ describe 'python::default' do
   end
 
 it 'should install python' do
-  expect(chef_run).to install_package 'python3'
+  expect(chef_run).to install_package 'python'
 end
 
+it 'should install pip' do
+  expect(chef_run).to install_package 'python-pip'
+end
 
-  end
+it 'runs apt get update' do
+      expect(chef_run).to update_apt_update 'update_sources'
+    end
+
+end
