@@ -17,8 +17,9 @@ describe 'python::default' do
     end
   end
 
-  it 'Should install python' do
-    expect(chef_run).to install_package 'python3'
+it 'should install python' do
+  expect(chef_run).to install_package 'python3'
+end
+
 
   end
-end

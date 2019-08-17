@@ -8,4 +8,8 @@ apt_update 'update_sources' do
   action :update
 end
 
-package 'python3'
+package 'python3' do
+  action :install
+end
+
+include_recipe 'poise-python'
