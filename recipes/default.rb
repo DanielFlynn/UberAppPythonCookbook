@@ -10,80 +10,89 @@ end
 
 package 'python'
 
-package 'python_pip'
+package 'python-pip'
 
-
-# package 'libncurses5-dev' do
-#   action :install
-# end
-
-#UberApp Requirments.txt
-# Flask==0.10.1
-# Jinja2==2.7.3
-# MarkupSafe==0.23
-# Werkzeug==0.9.6
-# gnureadline==6.3.3
-# itsdangerous==0.24
-# rauth==0.7.0
+#UberApp Requirments.txt          #UberApp Requirments-test.txt
+# Flask==0.10.1                   # pytest==2.5.2
+# Jinja2==2.7.3                   # pytest-cov==1.6
+# MarkupSafe==0.23                # betamax==0.4.0
+# Werkzeug==0.9.6                 # flake8==2.1.0
+# gnureadline==6.3.3              # pep8==1.5.6
+# itsdangerous==0.24              # pyflakes==0.8.1
+# rauth==0.7.0                    # coveralls==0.4.2
 # requests==2.3.0
 # wsgiref==0.1.2
 #gunicorn==18.0
 #Flask-SSLify==0.1.4
 
-python_pip "Flask" do
-  version "0.10.1"
+execute ' Flask plugin install' do
+  command 'pip install flask==0.10.1'      #Flask Plugin
 end
 
-python_pip "Jinja2" do
-  version "2.7.3"
+execute 'Jinja2 plugin install' do
+  command 'pip install Jinja2==2.7.3'      #Jinja2 Plugin
 end
 
-python_pip "markupsafe" do
-  version "0.23"
+execute 'markupsafe plugin installs' do
+  command 'pip install markupsafe==0.23'    #Markupsafe Plugin
 end
 
-python_pip "Werkzeug" do
-  version "0.9.6"
+execute 'werkzeug plugin install' do
+  command 'pip install werkzeug==0.9.6'     # Werkzeug Plugin
 end
 
-python_pip "gnureadline" do
-  version "6.3.3"
+execute 'gnureadline plugin install' do
+  command 'pip install gnureadline==6.3.3' # gnureadline Plugin
 end
 
-python_pip "itsdangerous" do
-  version "0.24"
+execute 'itsdangerous plugin install' do
+  command 'pip install itsdangerous==0.24'  # itsdangerous Plugin
 end
 
-python_pip "rauth" do
-  version "0.7.0"
+execute 'rauth plugin install' do
+  command 'pip install rauth==0.7.0'        #rauth plugin
 end
 
-python_pip "requests" do
-  version "2.3.0"
+execute 'requests plugin install' do
+  command 'pip install requests==2.3.0'     #requests plugin
 end
 
-python_pip "wsgiref" do
-  version "0.1.2"
+execute 'wsgiref plugin install' do
+  command 'pip install wsgiref==0.1.2'      #wsgiref plugin
 end
 
-python_pip "gunicorn" do
-  version "18.0"
+execute 'gunicorn plugin install' do
+  command 'pip install gunicorn==18.0'      #gunicorn plugin
 end
 
-python_pip "Flask-SSLify" do
-  version "0.1.4"
+execute 'Flask-SSLify plugin install' do
+  command 'pip install Flask-SSLify==0.1.4'     #Flask-SSLify plugin
 end
 
-#UberApp Requirments-test.txt
-# Test harness
-# pytest==2.5.2
-# # Coverage
-# pytest-cov==1.6
-# # HTTP Fixtures
-# betamax==0.4.0
-# # LINT OR DIE
-# flake8==2.1.0
-# pep8==1.5.6
-# pyflakes==0.8.1
-# # Coveralls
-# coveralls==0.4.2
+execute 'pytest plugin install' do
+  command 'pip install pytest==2.5.2'           #Pytest Plugin
+end
+
+execute 'pytest coverage plugin install' do
+  command 'pip install pytest-cov==1.6'         #Pytest coverage Plugin
+end
+
+execute 'betamax plugin install' do
+  command 'pip install betamax==0.4.0'          #betamax plugin
+end
+
+execute 'flake8 plugin install' do
+  command 'pip install flake8==2.1.0'       #flake8 plugin
+end
+
+execute 'pep8 plugin install' do
+  command 'pip install pep8==1.5.6'         #pep8 plugin
+end
+
+execute 'pyflakes plugin installs' do
+  command 'pip install pyflakes==0.8.1'       #pyflakes plugin
+end
+
+execute 'coveralls plugin install' do
+  command 'pip install coveralls==0.4.2'      #coveral plugin
+end
