@@ -22,11 +22,15 @@ it 'should install python' do
 end
 
 it 'should install pip' do
-  expect(chef_run).to install_package 'python-pip'
+  expect(chef_run).to install_package 'python_pip'
 end
 
 it 'runs apt get update' do
-      expect(chef_run).to update_apt_update 'update_sources'
-    end
+  expect(chef_run).to update_apt_update 'update_sources'
+end
+
+it 'should use pip to install plugins' do
+  expect(chef_run).to run_execute('python_pip install plugins')
+end
 
 end
