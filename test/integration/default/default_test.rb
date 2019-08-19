@@ -22,4 +22,108 @@ end
 describe package('python-pip') do
   it { should be_installed }
 end
+
+# UberApp Requirments.txt          #UberApp Requirments-test.txt
+# Flask==0.10.1                   # pytest==2.5.2
+# Jinja2==2.7.3                   # pytest-cov==1.6
+# MarkupSafe==0.23                # betamax==0.4.0
+# Werkzeug==0.9.6                 # flake8==2.1.0
+# gnureadline==6.3.3              # pep8==1.5.6
+# itsdangerous==0.24              # pyflakes==0.8.1
+# rauth==0.7.0                    # coveralls==0.4.2
+# requests==2.3.0
+# wsgiref==0.1.2
+# gunicorn==18.0
+# Flask-SSLify==0.1.4
+
+
+describe pip('Flask') do
+  it { should be_installed }
+  its('version') { should eq '0.10.1' }
+end
+
+describe pip('Jinja2') do
+  it { should be_installed }
+  its('version') { should eq '2.7.3' }
+end
+
+describe pip('MarkupSafe') do
+  it { should be_installed }
+  its('version') { should eq '0.23' }
+end
+
+describe pip('Werkzeug') do
+  it { should be_installed }
+  its('version') { should eq '0.9.6' }
+end
+
+describe pip('gnureadline') do
+  it { should be_installed }
+  its('version') { should eq '6.3.3' }
+end
+
+describe pip('itsdangerous') do
+  it { should be_installed }
+  its('version') { should eq '0.24' }
+end
+
+describe pip('rauth') do
+  it { should be_installed }
+  its('version') { should eq '0.7.0' }
+end
+
+describe pip('requests') do
+  it { should be_installed }
+  its('version') { should eq '2.3.0' }
+end
+
+describe pip('wsgiref') do
+  it { should be_installed }
+  its('version') { should eq '0.1.2' }
+end
+
+describe pip('gunicorn') do
+  it { should be_installed }
+  its('version') { should eq '18.0' }
+end
+
+describe pip('Flask-SSLify') do
+  it { should be_installed }
+  its('version') { should eq '0.1.4' }
+end
+
+describe pip('pytest') do
+  it { should be_installed }
+  its('version') { should eq '2.5.2' }
+end
+
+describe pip('pytest-cov') do
+  it { should be_installed }
+  its('version') { should eq '1.6' }
+end
+
+describe pip('betamax') do
+  it { should be_installed }
+  its('version') { should eq '0.4.0' }
+end
+
+describe pip('flake8') do
+  it { should be_installed }
+  its('version') { should eq '2.1.0' }
+end
+
+describe pip('pep8') do
+  it { should be_installed }
+  its('version') { should eq '1.5.6' }
+end
+
+describe pip('pyflakes') do
+  it { should be_installed }
+  its('version') { should eq '0.8.1' }
+end
+
+describe pip('coveralls') do
+  it { should be_installed }
+  its('version') { should eq '0.4.2' }
+end
 end
