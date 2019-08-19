@@ -12,6 +12,8 @@ package 'python'
 
 package 'python-pip'
 
+package 'libncurses5-dev'
+
 #UberApp Requirments.txt          #UberApp Requirments-test.txt
 # Flask==0.10.1                   # pytest==2.5.2
 # Jinja2==2.7.3                   # pytest-cov==1.6

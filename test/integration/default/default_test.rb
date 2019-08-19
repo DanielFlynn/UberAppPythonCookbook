@@ -22,7 +22,4 @@ end
 describe package('python-pip') do
   it { should be_installed }
 end
-
-describe package ('flask') do
-  it { should be_installed }
 end

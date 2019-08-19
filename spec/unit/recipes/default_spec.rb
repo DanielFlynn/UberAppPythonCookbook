@@ -15,7 +15,6 @@ describe 'python::default' do
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
-  end
 
 it 'should install python' do
   expect(chef_run).to install_package 'python'
@@ -49,6 +48,6 @@ it 'should install pip flask' do
   expect(chef_run).to run_execute 'pip install coveralls==0.4.2'
   expect(chef_run).to run_execute 'pip install flake8==2.1.0'
 
-end
-
+    end
+  end
 end
