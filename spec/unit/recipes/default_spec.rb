@@ -27,5 +27,28 @@ end
 it 'runs apt get update' do
   expect(chef_run).to update_apt_update 'update_sources'
 end
+
+it 'should install python plugins' do
+  expect(chef_run).to run_execute 'pip install flask==0.10.1'
+  expect(chef_run).to run_execute 'pip install Jinja2==2.7.3'
+  expect(chef_run).to run_execute 'pip install markupsafe==0.23'
+  expect(chef_run).to run_execute 'pip install werkzeug==0.9.6'
+  expect(chef_run).to run_execute 'pip install gnureadline==6.3.3'
+  expect(chef_run).to run_execute 'pip install itsdangerous==0.24'
+  expect(chef_run).to run_execute 'pip install rauth==0.7.0'
+  expect(chef_run).to run_execute 'pip install requests==2.3.0'
+  expect(chef_run).to run_execute 'pip install wsgiref==0.1.2'
+  expect(chef_run).to run_execute 'pip install gunicorn==18.0'
+  expect(chef_run).to run_execute 'pip install Flask-SSLify==0.1.4'
+  expect(chef_run).to run_execute 'pip install pytest==2.5.2'
+  expect(chef_run).to run_execute 'pip install pytest-cov==1.6'
+  expect(chef_run).to run_execute 'pip install betamax==0.4.0'
+  expect(chef_run).to run_execute 'pip install pep8==1.5.6'
+  expect(chef_run).to run_execute 'pip install pyflakes==0.8.1'
+  expect(chef_run).to run_execute 'pip install coveralls==0.4.2'
+  expect(chef_run).to run_execute 'pip install flake8==2.1.0'
+
+end
+
     end
   end
