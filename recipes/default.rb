@@ -25,7 +25,10 @@ package 'python-pip'
 #gunicorn==18.0
 #Flask-SSLify==0.1.4
 
-execute ' Flask plugin install' do
+# pip install install-requires
+# pip install -r requirements.txt
+
+execute 'Flask plugin install' do
   command 'pip install flask==0.10.1'      #Flask Plugin
 end
 

@@ -8,7 +8,7 @@ unless os.windows?
   describe user('root'), :skip do
     it { should exist }
   end
-end
+
 
 # This is an example test, replace it with your own test.
 describe port(80), :skip do
@@ -20,5 +20,9 @@ describe package('python') do
 end
 
 describe package('python-pip') do
+  it { should be_installed }
+end
+
+describe package ('flask') do
   it { should be_installed }
 end
